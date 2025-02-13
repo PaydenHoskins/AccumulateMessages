@@ -10,7 +10,7 @@ Module MessageProgram
 
     Function UserMessages(ByVal newMessage As String, ByVal clear As Boolean) As String
         'your code here
-        Return messages
+        Return "banana" 'messages
     End Function
 
 
