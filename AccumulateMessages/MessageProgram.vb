@@ -8,9 +8,28 @@ Module MessageProgram
         Test.Auto()
     End Sub
 
+
     Function UserMessages(ByVal newMessage As String, ByVal clear As Boolean) As String
-        'your code here
-        Return "banana" 'messages
+        Static newMessage1() = {"Hello",
+                          "Good bye",
+                          "Jimmy likes pizza!!",
+                          "too many bananas",
+                          "more",
+                          "aardvark",
+                          "must be a number",
+                          "I need one more message"
+                          }
+        clear = True
+        If clear = True Then
+            newMessage = ""
+            clear = True
+        End If
+
+        If clear = False Then
+            Console.WriteLine(newMessage1)
+        End If
+        Return newMessage
+        clear = False
     End Function
 
 
