@@ -1,3 +1,8 @@
+'Payden Hoskins
+'RCET2265
+'Spring 2025
+'AccumulateMessages
+'https://github.com/PaydenHoskins/AccumulateMessages.git
 
 Imports System
 

@@ -1,4 +1,9 @@
-﻿
+﻿'Payden Hoskins
+'RCET2265
+'Spring 2025
+'AccumulateMessages
+'https://github.com/PaydenHoskins/AccumulateMessages.git
+
 Option Explicit On
 Option Strict On
 Option Compare Text
