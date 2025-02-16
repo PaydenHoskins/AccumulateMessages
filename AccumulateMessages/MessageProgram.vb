@@ -10,26 +10,21 @@ Module MessageProgram
 
 
     Function UserMessages(ByVal newMessage As String, ByVal clear As Boolean) As String
-        Static newMessage1() = {"Hello",
-                          "Good bye",
-                          "Jimmy likes pizza!!",
-                          "too many bananas",
-                          "more",
-                          "aardvark",
-                          "must be a number",
-                          "I need one more message"
-                          }
-        clear = True
-        If clear = True Then
-            newMessage = ""
-            clear = True
+        'Builds an array of strings which is used to write our sequential messages to.
+        Static Messages As New Text.StringBuilder()
+        If clear Then
+            ' When we write a true to the clear it gets rid of all strings writen
+            Messages.Clear()
+        ElseIf newMessage = "" Then
+            ' If there is nothing written to the message the we will just write nothing
+            Messages.Append(newMessage)
+        ElseIf newMessage = newMessage Then
+            'If we are writting a list it writes each
+            'word and then write the nest word to a new line
+            Messages.AppendLine(newMessage)
         End If
-
-        If clear = False Then
-            Console.WriteLine(newMessage1)
-        End If
-        Return newMessage
-        clear = False
+        'Returns the messages wrote to the stringbuilder
+        Return Messages.ToString()
     End Function
 
 
